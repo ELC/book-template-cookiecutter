@@ -13,6 +13,5 @@
     "book_google_analytics_tag": "G-XXXXXXXX",
     "develop_branch": "develop",
     "deployment_branch": "master",
-    "_copy_without_render": ["*analytics.js", "*.css", "frontend*"],
-    "_extensions": ["jinja2_time.TimeExtension"]
+    "_copy_without_render": ["*analytics.js", "*.css", "frontend*"]
 }
