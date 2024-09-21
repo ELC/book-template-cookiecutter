@@ -4,8 +4,18 @@
     "book_description": "{{ cookiecutter.book_name }} is a template repository for creating Jupyter Books",
     "book_author": "{{ 'Ezequiel Leonardo Castaño'}}",
     "book_year": "{% now 'utc', '%Y' %}",
-    "book_license": ["MIT", "Apache-2.0", "BSD-3-Clause"],    
-    "book_python_version": ["3.8", "3.7", "3.9", "3.10", "3.11"],
+    "book_license": [
+        "MIT",
+        "Apache-2.0",
+        "BSD-3-Clause"
+    ],
+    "book_python_version": [
+        "3.8",
+        "3.7",
+        "3.9",
+        "3.10",
+        "3.11"
+    ],
     "github_username": "ELC",
     "github_repository_name": "{{ cookiecutter.book_slug }}",
     "book_repository": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}",
@@ -13,5 +23,9 @@
     "book_google_analytics_tag": "G-XXXXXXXX",
     "develop_branch": "develop",
     "deployment_branch": "master",
-    "_copy_without_render": ["*analytics.js", "*.css", "frontend*"]
+    "_copy_without_render": [
+        "*analytics.js",
+        "*.css",
+        "frontend*"
+    ]
 }
