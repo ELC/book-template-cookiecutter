@@ -22,7 +22,7 @@
     "book_url": "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.github_repository_name }}",
     "book_google_analytics_tag": "G-XXXXXXXX",
     "develop_branch": "develop",
-    "deployment_branch": "master",
+    "deployment_branch": "main",
     "_copy_without_render": [
         "*analytics.js",
         "*.css",
