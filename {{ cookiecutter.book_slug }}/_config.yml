@@ -12,7 +12,7 @@ html:
 
 repository:
   url: {{ cookiecutter.book_repository }}
-  branch: source
+  branch: {{ cookiecutter.deployment_branch }}
 
 launch_buttons:
   binderhub_url: "https://mybinder.org"

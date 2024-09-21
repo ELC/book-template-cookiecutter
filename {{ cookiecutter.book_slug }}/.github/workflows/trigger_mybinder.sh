@@ -3,16 +3,19 @@
 function trigger_binder() {
     local URL="${1}"
 
-    curl -L --connect-timeout 10 --max-time 45 "${URL}"
+    local CONTENT=$(curl --location --connect-timeout 10 --write-out "%{response_code}" "${URL}")
     
-    curl_return=$?
+    echo "Result: $CONTENT"
 
-    if [ $curl_return -eq 0 ] || [ $curl_return -eq 28 ]; then
-        return 0
+    local STATUSCODE=$(echo "$CONTENT" | tail -n 1)
+
+    if [ "$STATUSCODE" -eq "200" ]; then
+        echo "Success"
+        exit 0
     fi
 
-    return $curl_return
-
+    echo "Error: HTTP status $STATUSCODE"
+    exit 1
 }
 
-trigger_binder "$@" || exit 1
+trigger_binder "$@"
